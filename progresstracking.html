@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Tracking and Scoring</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9fb;
+        }
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .section {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-bar {
+            width: 100%;
+            background: #e0e0e0;
+            border-radius: 25px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar div {
+            width: 65%; /* Replace with dynamic value */
+            height: 20px;
+            background: #4caf50;
+        }
+
+        .progress-info {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .milestones {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .milestones li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .milestones li .icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .milestones li.completed .icon {
+            background: #4caf50;
+        }
+
+        .milestones li.pending .icon {
+            background: #ddd;
+        }
+
+        .score-card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .score-card .card {
+            background: #f1f1f1;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .score-card .card .value {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .feedback-section textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .feedback-section button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .feedback-section button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Progress Section -->
+    <div class="section">
+        <h2>Project Progress</h2>
+        <div class="progress-bar">
+            <div></div>
+        </div>
+        <div class="progress-info">65% Completed</div>
+    </div>
+
+    <!-- Milestones Section -->
+    <div class="section">
+        <h2>Assignment Milestones</h2>
+        <ul class="milestones">
+            <li class="completed">
+                <span class="icon"><i class="fas fa-check"></i></span>
+                Task 1: Research and Planning
+            </li>
+            <li class="completed">
+                <span class="icon"><i class="fas fa-check"></i></span>
+                Task 2: Initial Design
+            </li>
+            <li class="pending">
+                <span class="icon"><i class="fas fa-clock"></i></span>
+                Task 3: Development
+            </li>
+            <li class="pending">
+                <span class="icon"><i class="fas fa-clock"></i></span>
+                Task 4: Testing and Feedback
+            </li>
+        </ul>
+    </div>
+
+    <!-- Score Breakdown Section -->
+    <div class="section">
+        <h2>Score Breakdown</h2>
+        <div class="score-card">
+            <div class="card">
+                <div class="label">Task Speed</div>
+                <div class="value">8/10</div>
+            </div>
+            <div class="card">
+                <div class="label">Accuracy</div>
+                <div class="value">9/10</div>
+            </div>
+            <div class="card">
+                <div class="label">Quality</div>
+                <div class="value">10/10</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback Section -->
+    <div class="section feedback-section">
+        <h2>Feedback</h2>
+        <textarea rows="5" placeholder="Enter your feedback here..."></textarea>
+        <button>Submit Feedback</button>
+    </div>
+</div>
+
+</body>
+</html>
